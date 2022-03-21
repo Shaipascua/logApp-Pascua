@@ -3,7 +3,7 @@
     require('config/config.php');
     require('config/db.php');
 
-    $query = 'SELECT * FROM Person';
+    $query = 'SELECT * FROM UserAccount';
     $result = mysqli_query($conn, $query);
     $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_free_result($result);
@@ -18,11 +18,9 @@
         <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Log Date and Time</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password</th>
                     </tr>
                 </thead>
 		
@@ -30,12 +28,9 @@
                 <tbody>
                 <?php foreach($persons as $person) : ?>
                     <tr>
-                    <th scope="row"><?php echo $person['p_id'];?></th>
-                    <td><?php echo $person['firstname'];?></td>
-                    <td><?php echo $person['lastname'];?></td>
-                    <td><?php echo $person['address'];?></td>
-                    <td><?php echo $person['logDT'];?></td>
-                    </tr>
+                    <th scope="row"><?php echo $person['uid'];?></th>
+                    <td><?php echo $person['username'];?></td>
+                    <td><?php echo $person['password'];?></td>
                 <?php endforeach; ?>   
                 </tbody>
             </div>
