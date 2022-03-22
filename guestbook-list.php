@@ -3,7 +3,7 @@
     require('config/config.php');
     require('config/db.php');
     
-    $result= $conn->query("SELECT * FROM person");
+    $result= $conn->query("SELECT * FROM Person");
     $query = 'SELECT * FROM person ORDER BY pid DESC';
     $result = mysqli_query($conn, $query);
     $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
