@@ -35,7 +35,7 @@
                     <td><?php echo $person['firstname'];?></td>
                     <td><?php echo $person['lastname'];?></td>
                     <td><?php echo $person['address'];?></td>
-                    <td><?php echo $person['logdt'];?></td>
+                    <td><?php echo $person['logDT'];?></td>
                     </tr>
                 <?php endforeach; ?>   
                 </tbody>
