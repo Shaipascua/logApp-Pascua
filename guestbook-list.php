@@ -4,7 +4,7 @@
     require('config/db.php');
     
     $result= $conn->query("SELECT * FROM Person");
-    $query = 'SELECT * FROM person ORDER BY pid DESC';
+    $query = 'SELECT * FROM Person ORDER BY pid DESC';
     $result = mysqli_query($conn, $query);
     $persons = mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_free_result($result);
